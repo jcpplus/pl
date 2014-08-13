@@ -1,0 +1,39 @@
+/*
+*reset
+*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+
+
+/*模态框*/
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  outline: 0;
+}
+
+/*
+* .button-error {
+background: rgb(202, 60, 60);
+}
+*/
+.pure-button-error {
+  background: rgb(202, 60, 60);
+  color: #FFF;
+  display: none;
+}
+
+/*预约已满*/
+.order-free-disabled .pure-button-primary{
+  display: none;
+}
