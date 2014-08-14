@@ -67,17 +67,6 @@ button.close {
   transform: translate3d(0, 0, 0)
 }
 
-/*.modal-open .modal {*/
-  /*overflow-x: hidden;*/
-  /*overflow-y: auto*/
-/*}*/
-
-/*.modal-dialog {*/
-  /*position: relative;*/
-  /*width: auto;*/
-  /*margin: 10px*/
-/*}*/
-
 .modal-content {
   position: relative;
   background-color: #fff;
@@ -130,18 +119,6 @@ button.close {
   border-top: 1px solid #e5e5e5
 }
 
-/*.modal-footer .btn + .btn {*/
-  /*margin-bottom: 0;*/
-  /*margin-left: 5px*/
-/*}*/
-
-/*.modal-footer .btn-group .btn + .btn {*/
-  /*margin-left: -1px*/
-/*}*/
-
-/*.modal-footer .btn-block + .btn-block {*/
-  /*margin-left: 0*/
-/*}*/
 
 .modal-scrollbar-measure {
   position: absolute;
@@ -152,19 +129,12 @@ button.close {
 }
 
 @media (min-width: 768px) {
-  /*.modal-dialog {*/
-    /*width: 600px;*/
-    /*margin: 30px auto*/
-  /*}*/
 
   .modal-content {
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
     box-shadow: 0 5px 15px rgba(0, 0, 0, .5)
   }
 
-  /*.modal-sm {*/
-    /*width: 300px*/
-  /*}*/
 }
 
 /*@media (min-width: 992px) {*/

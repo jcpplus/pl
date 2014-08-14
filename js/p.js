@@ -2,14 +2,12 @@
 
 function OrderFree() {
   this.animate = "fadeOut" || "";
-  this.$temp = function () {
-    return $('#orderForm');
-  }
+
 }
 
 OrderFree.prototype.hideModal = function () {
   $(".modal").fadeOut();
-  $(".modal-backdrop").fadeOut();
+  $(".modal-backdrop").remove();
 };
 
 OrderFree.prototype.showModal = function () {
@@ -28,7 +26,7 @@ OrderFree.prototype.validate = function () {
 
   if ($companyName.val() === "" || $storeLocation.val() === "") {
     this.clearMsg();
-    $error = $('<p class="text-error">信息请补完整</p>');
+    $error = $('<p class="alert alert-danger">信息请补完整</p>');
     $error.insertAfter($form);
     return false;
   }
@@ -54,14 +52,14 @@ OrderFree.prototype.orderDisabled = function () {
   this.showModal();
   var $form = $('#orderForm');
   $form.addClass('order-free-disabled');
-  $form.find('input').prop('disabled', 'true');
+  $form.find('input').prop('disabled', true);
   $form.find('.pure-button-error').show();
 };
 
 OrderFree.prototype.orderAble = function () {
   var $form = $('#orderForm');
   $form.removeClass('order-free-disabled');
-  $form.find('input').prop('disabled', '');
+  $form.find('input').prop('disabled', false);
   $form.find('.pure-button-error').hide();
 };
 
@@ -80,6 +78,7 @@ $("#orderFreeBtn").on('click', function () {
     //不能约
     console.log("不能");
     or.orderDisabled();
+    or.clearMsg();
   }
 
 });
