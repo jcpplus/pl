@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+img.translateFromLeft {
+  transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-30deg);
+  /* Opera, Chrome, and Safari */
+
+  animation: translateFromLeft 800ms;
+  animation-iteration-count: 1;
+
+  /* Safari and Chrome */
+  -webkit-animation: translateFromLeft 800ms;
+  -webkit-animation-iteration-count: 1;
+
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes translateFromLeft {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Opera, Chrome, and Safari */
+  }
+}
+
+@-webkit-keyframes translateFromLeft {
+  /* Safari and Chrome */
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Opera, Chrome, and Safari */
+  }
+}
+
+
+img.translateFromRight {
+  transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  animation: translateFromRight 800ms;
+  animation-iteration-count: 1;
+  -webkit-animation: translateFromRight 800ms;
+  -webkit-animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes translateFromRight {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Opera, Chrome, and Safari */
+  }
+}
+
+@-webkit-keyframes translateFromRight {
+  /* Safari and Chrome */
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Opera, Chrome, and Safari */
+  }
+}
