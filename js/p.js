@@ -34,8 +34,8 @@ OrderFree.prototype.validate = function () {
 };
 
 OrderFree.prototype.clearMsg = function () {
-  $('.text-error').remove();
-  $('.text-success').remove();
+  $('.alert-danger').remove();
+  $('.alert-danger').remove();
 };
 
 OrderFree.prototype.orderSuccessModal = function () {
@@ -93,4 +93,51 @@ $("#orderButton").on('click', function () {
     or.orderSuccessModal();
   }
 });
+
+
+var bindOrderFreeForm = function () {
+  var $form = $("#orderForm");
+  $form.find('#orderButton').on('click', function () {
+
+
+    if (validate()) {
+      var url = $form.attr('action');
+      var type = $form.attr('method') || "GET";
+      var ajaxOpts = {
+        type: type,
+        url: url,
+        //data: $form.serialize(),
+        success: function (result) {
+          var $info;
+          if (result.status.toUpperCase() === 'SUCCESS') {
+            clearMessages();
+            $form2.show();
+            hideForm1($form);
+          } else {
+            clearMessages();
+            $info = $('<p class="alert alert-danger">' + result.message + '</p>');
+            $info.insertBefore($form);
+          }
+        },
+        error: function () {
+          clearMessages();
+          var $info = $('<p class="alert alert-danger">提交失败，请重新输入正确的信息以提交。</p>');
+          $info.insertBefore($form);
+        }
+      };
+      $.ajax(ajaxOpts);
+    }
+    return false;
+  });
+
+};
+
+var init = function () {
+  bindOrderFreeForm();
+};
+
+$(function () {
+  init();
+});
+
 

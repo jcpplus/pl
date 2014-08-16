@@ -209,7 +209,13 @@ img {
 
 .last-container .orderFreeBtn{
   position: absolute;
-  top: 10px;
-  left: 45%;
   padding: 1.5em 4.5em;
+  position: absolute;
+  width: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  top: 25%;
+  left: 0;
+  right: 0;
 }
+

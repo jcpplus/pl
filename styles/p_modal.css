@@ -42,14 +42,18 @@ button.close {
 }
 
 .modal {
-  position: relative;
+  position: absolute;
   width: 500px;
   display: none;
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
   outline: 0;
-  margin: 20px auto;
   z-index: 1050;
+  margin-right: auto;
+  margin-left: auto;
+  left: 0;
+  right: 0;
+  top: 10%;
 }
 
 .modal.fade .modal-dialog {
